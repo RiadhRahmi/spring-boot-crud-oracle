@@ -1,0 +1,2 @@
+https://www.bezkoder.com/spring-boot-hibernate-oracle/
+https://www.it-swarm-fr.com/fr/java/erreur-ora-02289-la-sequence-nexiste-pas-org.hibernate.exception.sqlgrammarexception-impossible-dextraire-resultset/1053895697/

@@ -1,0 +1,116 @@
+//how to install oracle db
+https://www.youtube.com/watch?v=7IluyJV3lKw
+https://www.youtube.com/watch?v=74Bo5PNmsuU
+https://www.youtube.com/watch?v=SoSIcuouAl0&list=PLlxQJeQRaKDRHS274EzYfoBUI1KLBZDk7&index=2
+https://stackoverflow.com/questions/33330968/error-ora-65096-invalid-common-user-or-role-name-in-oracle
+
+
+
+
+
+
+
+// params
+db=orcl et pwd=orcl
+https://localhost:5500/em
+
+
+
+
+
+
+
+// use cmd or use sql developer tool
+set ORACLE_SID=orcl
+
+// connect to oracle db
+sqlplus / as sysdba
+
+// show connection name
+show con_name
+
+// check status of our instance db
+select status from v$instance;
+
+
+
+
+
+
+
+// how to use sqldeveloper tool to create custom database and custom users
+system/orcl
+https://www.youtube.com/watch?v=58V-w3buWm4
+
+// create user in sql developer tools
+https://www.youtube.com/watch?v=0ik4kUfo2jo
+alter session set "_ORACLE_SCRIPT"=true;
+CREATE USER springdb IDENTIFIED BY springdb;
+GRANT CONNECT TO springdb;
+GRANT CREATE SESSION, GRANT ANY PRIVILEGE TO springdb;
+GRANT UNLIMITED TABLESPACE TO springdb;
+GRANT CREATE TABLE TO springdb;
+grant all privileges to springdb;
+
+// active HR User
+https://dba.stackexchange.com/questions/268699/unlock-hr-user-in-oracle-19c-18c-12c
+https://www.youtube.com/watch?v=BkqES-B1azc
+
+// describe table
+DESCRIBE nameTable;
+
+
+
+
+
+
+// oracle sql tutos
+
+https://www.javatpoint.com/oracle-tutorial
+
+// create table
+
+CREATE TABLE customers  
+( customer_id number(10) NOT NULL,  
+  customer_name varchar2(50) NOT NULL,  
+  city varchar2(50)  
+);
+
+// drop table
+
+DROP TABLE customers;  
+
+// insert data in database
+
+INSERT INTO customers  
+(customer_id, customer_name, city)  
+VALUES  
+(50, 'Flipkart','Monastir');  
+
+
+// select from database
+SELECT *  
+FROM customers;
+
+
+// update from database
+
+UPDATE suppliers  
+SET supplier_name = 'Kingfisher'  
+WHERE supplier_id = 2;  
+
+// delete from database
+DELETE FROM customers  
+WHERE last_name = 'Maurya'  
+AND customer_id > 2;  
+
+// truncate table
+TRUNCATE TABLE customers;  
+
+
+// like in select query
+
+select * from table1 where name like 's%'
+
+// and operator
+select id, name from table1 where name='dolly' AND age=18
